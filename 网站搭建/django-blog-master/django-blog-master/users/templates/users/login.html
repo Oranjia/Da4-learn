@@ -1,0 +1,26 @@
+{% extends 'users/base.html' %}
+
+
+{% block head %}
+    <title>登录页面</title>
+{% endblock head %}
+    
+
+{% block content %}
+    <div class="box">
+        <h1 class="is-uppercase has-text-centered has-text-weight-bold">轻编程
+            <br><span class="tag">登录</span>
+        </h1>
+        <hr class=" dropdown-divider">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {{ form.errors }}
+            <a class=" is-pulled-right is-size-7" href="{% url 'users:forget_pwd' %}">忘记密码?</a>
+            <div class=" is-clearfix"></div>
+            <input type="submit" style="margin-top: 1em;" class="button is-link is-fullwidth" value="登 录">
+        </form>
+    </div>
+
+{% endblock content %}
+

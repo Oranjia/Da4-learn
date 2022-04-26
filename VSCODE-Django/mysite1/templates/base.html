@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block mytitle %}
+    <title>主页</title>
+    {% endblock %}
+</head>
+<body>
+    
+    <!-- 这部分不能修改 -->
+    <a href="/music_index">音乐频道</a>
+    <a href="/sport_index">体育频道</a>
+
+<!-- 这部分可以修改 -->
+    {% block info %}
+    这是主页
+    {% endblock %}
+    <img src="../static/image/cyc300.jpg"  width="10px" height="10px">
+
+    {% load static %}
+    <img src="{% static '/image/cyc300.jpg' %}" width="10px" height="10px">
+    <br>
+<!-- 改不了的 -->
+    <h3>有问题联系cyc同学</h3>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>这是模板</p>
+    <p>{{ dics.username|upper }}</p>  
+    <!-- | 模板过滤器 -->
+    <p>{{ dic_news.list.1 }}</p>  
+    <!-- 调用对应字典对应列表 -->
+    <p>{{ dic_news.dic.b }}</p>
+    <p>{{ dics.daima }}</p>   
+    <!-- 默认是文本 -->
+    <!-- <p>{{ dics.daima |safe }}</p>    -->
+    <!-- 给个safe就是代码了 -->
+
+    
+</body>
+</html>

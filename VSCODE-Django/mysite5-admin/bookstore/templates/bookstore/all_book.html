@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>所有的书籍</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>pub</th>
+            <th>price</th>
+            <th>market</th>
+            <th>op</th>
+        </tr>
+        {% for book in all_book %}
+            <tr>
+                <td>{{book.id}}</td>
+                <td>{{book.title}}</td>
+                <td>{{book.pub}}</td>
+                <td>{{book.price}}</td>
+                <td>{{book.market}}</td>
+                <td>
+                    <!-- 两种不同的风格传递 -->
+                    <!-- 路由 -->
+                    <a href="/bookstore/update_book/{{book.id}}">更新</a>   
+                    <!-- 查询字符串 -->
+                    <a href="/bookstore/delete_book?book_id={{book.id}}">删除</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
